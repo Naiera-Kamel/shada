@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>واجب إيمان - بر الوالدين</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:linear-gradient(180deg,#f3f9ff 0%,#fff9ef 100%);color:#3b3b4f;font-family:"Noto Naskh Arabic","Amiri",Tahoma,"Segoe UI",Arial,sans-serif;text-align:center}
+button{touch-action:manipulation;-webkit-user-select:none;user-select:none}
+#top{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;background:rgba(255,255,255,.92);box-shadow:0 2px 8px rgba(80,70,40,.10)}
+#top button{font-family:inherit;font-size:clamp(17px,2.6vw,22px);border:0;border-radius:16px;padding:6px 14px;background:#eef2f8;color:#3b3b4f;cursor:pointer}
+#tt{font-size:clamp(17px,2.8vw,24px);font-weight:bold}
+#pts{font-size:clamp(17px,2.6vw,22px);background:#fff2c2;border-radius:16px;padding:6px 12px;white-space:nowrap}
+#pr{height:9px;background:#e8e2d2}
+#pr div{height:100%;width:0;background:#6c9be0;transition:width .4s,background .3s}
+#app{max-width:920px;margin:0 auto;padding:clamp(10px,2.5vw,24px) clamp(10px,2.5vw,22px) 110px}
+#fl{position:fixed;left:14px;bottom:14px;z-index:30;width:clamp(62px,9vw,78px);height:clamp(62px,9vw,78px);border:0;border-radius:50%;background:#6c9be0;color:#fff;font-family:inherit;font-size:clamp(30px,5vw,40px);line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.28);padding:0}
+#fl small{display:block;font-size:clamp(11px,1.6vw,14px);line-height:1.1;margin-top:2px}
+.lcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:10px 0}
+.lc{border-radius:24px;padding:12px 8px;color:#fff}
+.lc .e{font-size:clamp(46px,7vw,64px);line-height:1.3}
+.lc .n{font-size:clamp(28px,4vw,38px);font-weight:bold}
+.lc .d{font-size:clamp(19px,2.6vw,24px);line-height:1.8;margin:4px 0}
+.lc .xs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.lc .xw{font-family:inherit;font-size:clamp(26px,4vw,34px);border:0;border-radius:16px;padding:0 14px;background:#fff;color:#3b3b4f;cursor:pointer}
+.card{background:#fff;border-radius:28px;padding:clamp(14px,3vw,28px) clamp(10px,2.5vw,24px);box-shadow:0 4px 16px rgba(80,70,40,.12);margin-bottom:14px;overflow:hidden}
+h1,h2{margin:0 0 6px;font-weight:bold}
+h1{font-size:clamp(30px,5vw,44px)}
+h2{font-size:clamp(26px,4vw,36px)}
+.txt{font-size:clamp(22px,3.2vw,30px);line-height:2;margin:6px 0}
+.em{font-size:clamp(60px,10vw,96px);line-height:1.3}
+.word{font-size:clamp(66px,11vw,110px);line-height:1.8;margin:2px 0}
+.small{font-size:clamp(17px,2.4vw,21px);color:#777;line-height:1.8}
+.badge{display:inline-block;color:#fff;border-radius:18px;padding:3px 16px;font-size:clamp(17px,2.4vw,22px);font-weight:bold;margin-bottom:4px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.mc{font-family:inherit;border:0;border-radius:26px;padding:16px 10px;cursor:pointer;color:#3b3b4f;transition:transform .15s;position:relative}
+.mc:active{transform:scale(.97)}
+.mc.star{grid-column:1/-1;border:5px solid #d9487e}
+.mc .e{font-size:clamp(48px,7vw,70px);line-height:1.3}
+.mc .n{font-size:clamp(23px,3.4vw,32px);font-weight:bold;line-height:1.6}
+.mc .s{font-size:clamp(17px,2.4vw,21px);line-height:1.7;min-height:30px}
+.sent{display:flex;align-items:center;gap:8px;justify-content:center;background:#fdfaf2;border-radius:22px;padding:4px 10px;margin:10px 0}
+.sent .t{flex:1;font-size:clamp(30px,5vw,46px);line-height:2.1}
+.w{display:inline-block;border-radius:12px;padding:0 6px;margin:0 1px;transition:background .2s}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0}
+.chip{font-family:inherit;font-size:clamp(16px,2.3vw,20px);line-height:1.4;border:4px solid transparent;border-radius:18px;padding:6px 12px;cursor:pointer;color:#3b3b4f}
+.chip.on{border-color:#3b3b4f;font-weight:bold}
+.nx{font-family:inherit;font-size:clamp(24px,3.4vw,32px);border:0;border-radius:28px;padding:12px 40px;margin:12px 5px 0;background:#6c9be0;color:#fff;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.15)}
+.nx.gr{background:#9aa3b5}
+.sp{font-family:inherit;font-size:clamp(26px,4vw,34px);border:0;border-radius:50%;width:clamp(50px,7vw,62px);height:clamp(50px,7vw,62px);background:#7fb2e0;color:#fff;cursor:pointer;flex:none}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
+.opts.lt{grid-template-columns:repeat(3,1fr)}
+.opt{font-family:inherit;font-size:clamp(24px,3.4vw,32px);border:4px solid;border-radius:24px;padding:14px 8px;background:#fff;color:#3b3b4f;cursor:pointer;line-height:1.6;transition:transform .12s;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.opt:active{transform:scale(.97)}
+.opt.big{font-size:clamp(34px,5vw,48px)}
+.opt.let{font-size:clamp(50px,9vw,78px);line-height:1.3}
+.opt.sg{font-size:clamp(20px,3vw,26px)}
+.sig{font-size:clamp(50px,8vw,72px);line-height:1.5;display:block}
+.opt.ok{outline:7px solid #2fa56f;outline-offset:2px}
+.opt.no{opacity:.4}
+.fb{font-size:clamp(23px,3.2vw,30px);line-height:1.8;min-height:42px;margin-top:6px}
+.ex{background:#fbf3de;border-radius:18px;padding:10px 14px;font-size:clamp(19px,2.6vw,24px);line-height:1.9;margin-top:8px}
+.parts{font-size:clamp(40px,7vw,60px);line-height:1.9;margin:2px 0 8px}
+.pt{display:inline-block;border-radius:20px;padding:0 18px;margin:0 5px;color:#fff;background:#a8aab8}
+.plus{font-size:34px;color:#999}
+.sent2{font-size:clamp(34px,6vw,54px);line-height:2.2;margin:8px 0}
+.tw{display:inline-block;font-family:inherit;font-size:inherit;border:0;border-radius:20px;background:#f1ede2;padding:0 16px;margin:5px;cursor:pointer;color:#3b3b4f;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.tw.ok{background:#bfe3cf;outline:6px solid #2fa56f}
+.tw.no{background:#f4cdc4}
+.stars{font-size:clamp(48px,8vw,72px)}
+.sc{font-size:clamp(42px,7vw,60px);color:#6c9be0;font-weight:bold}
+table{width:100%;border-collapse:collapse;font-size:clamp(17px,2.4vw,22px);margin-top:8px}
+td{padding:7px;border-bottom:1px solid #eee;text-align:right}
+td.n{text-align:center;white-space:nowrap}
+.g{color:#1b7a43}.r{color:#c1121f}
+.bp{position:fixed;z-index:20;font-size:30px;pointer-events:none;animation:fly .9s ease-out forwards}
+@keyframes fly{to{transform:translate(var(--dx),var(--dy)) scale(.5);opacity:0}}
+.shake{animation:sh .35s}
+@keyframes sh{0%,100%{transform:translateX(0)}25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
+.pop{animation:pp .35s}
+@keyframes pp{0%{transform:scale(.7)}60%{transform:scale(1.1)}100%{transform:scale(1)}}
+@media(min-width:760px){.opts.two{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.opts{grid-template-columns:1fr}.opts.lt{grid-template-columns:repeat(3,1fr)}}
+</style></head><body>
+<div id="top"><button id="hm">🏠 الْقَائِمَةُ</button><span id="tt">وَاجِبُ إِيمَانَ</span><span id="pts">⭐ ٠</span></div>
+<div id="pr"><div id="bar"></div></div>
+<div id="app"></div>
+<button id="fl" aria-label="الرجوع للقائمة">🏠<small>رجوع</small></button>
+<script>
+(function(){
+function $(s){return document.querySelector(s);}
+function all(s){return Array.prototype.slice.call(document.querySelectorAll(s));}
+var SH="ّ",SU="ْ",FA="َ",DA="ُ",KA="ِ",FT="ً",DT="ٌ",KT="ٍ",TW="ـ";
+var VOW={a:FA,u:DA,i:KA},MK={a:FT,u:DT,i:KT};
+function mk(p,L,t){return p+L+SH+MK[t]+(t==="a"?"ا":"");}
+function sp(p,L,t){return [p+L+SU,L+VOW[t]+"نْ"];}
+function sym(t){return TW+SH+MK[t];}
+function arn(n){var d="٠١٢٣٤٥٦٧٨٩",s=String(n),o="",k;for(k=0;k<s.length;k++){o+=d.charAt(parseInt(s.charAt(k),10));}return o;}
+var TTS=!!(window.speechSynthesis&&window.SpeechSynthesisUtterance);
+function say(x){try{if(TTS){window.speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(x);u.lang="ar-SA";u.rate=0.6;window.speechSynthesis.speak(u);}}catch(e){}}
+function spk(x){return TTS?'<button class="sp" data-say="'+x+'">🔊</button>':'';}
+function bindSay(){all("[data-say]").forEach(function(b){b.onclick=function(){say(b.getAttribute("data-say"));};});}
+function burst(el){
+ try{
+  var r=el.getBoundingClientRect(),E=["⭐","🌟","✨","🎉","💛","🌈"],k,s;
+  for(k=0;k<7;k++){
+   s=document.createElement("span");s.className="bp";s.innerHTML=E[k%E.length];
+   s.style.left=(r.left+r.width/2)+"px";s.style.top=(r.top+r.height/2)+"px";
+   s.style.setProperty("--dx",(Math.random()*240-120)+"px");s.style.setProperty("--dy",(-60-Math.random()*130)+"px");
+   document.body.appendChild(s);
+   (function(x){setTimeout(function(){if(x.parentNode){x.parentNode.removeChild(x);}},950);})(s);
+  }
+ }catch(e){}
+}
+var app=$("#app");
+
+/* ---- النص ---- */
+var P=[
+["إِيمَانُ|m","بِنْتٌ|t,tf","طَيِّبَةٌ|s,t,tm"],
+["تُحِبُّ|m,s","أُمَّهَا|s","مَرْوَةَ|tm","وَأَبَاهَا|m","شَمْسَانَ|m"],
+["مَرْوَةُ|tm","أُمٌّ|st","حَنُونٌ|m,t","وَشَمْسَانُ|m","أَبٌ|t","كَرِيمٌ|m,t"],
+["تُسَاعِدُ|m","إِيمَانُ|m","الْأُمَّ|lq,s","فِي|m","الْمَطْبَخِ|lq","وَتُرَتِّبُ|s","السُّفْرَةَ|ls,tm"],
+["تَقُولُ|m","شُكْرًا|t","يَا|m","أُمِّي|s,m"],
+["وَتُقَبِّلُ|s","يَدَ|","أَبِيهَا|m","بَعْدَ|","الطَّعَامِ|ls,s,m"],
+["تُحِبُّهُمَا|m,s","حُبًّا|st","كَبِيرًا|m,t"],
+["تَعِيشُ|m","الْأُسْرَةُ|lq,tm","فِي|m","بَيْتٍ|t,tf","مَلِيءٍ|m,t","بِحُبٍّ|st"],
+["وَتَقُولُ|m","الْحَمْدُ|lq","لِلَّهِ|s,h"]
+];
+var PRI=["st","s","t","m","ls","lq","tm","tf","h"];
+var CH=[["st","شَدَّةٌ + تَنْوِينٌ ⭐","#ffc2d4"],["s","الشَّدَّةُ","#ffe0b5"],["t","التَّنْوِينُ","#cfe3f7"],["m","الْمَدُّ","#e4d6f5"],["ls","لَامٌ شَمْسِيَّةٌ ☀️","#fff0a0"],["lq","لَامٌ قَمَرِيَّةٌ 🌙","#d9d9ee"],["tm","تَاءٌ مَرْبُوطَةٌ ( ة )","#bff0e2"],["tf","تَاءٌ مَفْتُوحَةٌ ( ت )","#dff0a8"],["h","هَاءٌ ( ه )","#f3c9f0"]];
+var colOf={};(function(){var k;for(k=0;k<CH.length;k++){colOf[CH[k][0]]=CH[k][2];}})();
+
+/* ---- ألوان الأزرار ---- */
+var TNC=[["#3b82c4","#fff"],["#d9487e","#fff"],["#2fa56f","#fff"]];
+var LMC=[["#ffd666","#3b3b4f"],["#c5cdf5","#3b3b4f"]];
+var LTC=[["#3b82c4","#fff"],["#14a38b","#fff"],["#e8873a","#fff"]];
+var CP={a:"#3b82c4",u:"#d9487e",i:"#2fa56f"};
+
+/* ---- بنوك الأسئلة ---- */
+var TN=["تَنْوِينُ فَتْحٍ","تَنْوِينُ ضَمٍّ","تَنْوِينُ كَسْرٍ"];
+var MD=["مَدٌّ بِالْأَلِفِ","مَدٌّ بِالْوَاوِ","مَدٌّ بِالْيَاءِ"];
+var LM=["لَامٌ شَمْسِيَّةٌ ☀️","لَامٌ قَمَرِيَّةٌ 🌙"];
+var LT=["ت","ة","ه"];
+var YN=["✅ نَعَمْ","❌ لَا"];
+var CX="الشَّدَّةُ + التَّنْوِينُ",CM="الْمَدُّ",CT="التَّنْوِينُ",CS="الشَّدَّةُ",CL="اللَّامُ الشَّمْسِيَّةُ وَالْقَمَرِيَّةُ",CF="الْفَهْمُ";
+var CTM="التَّاءُ الْمَرْبُوطَةُ",CTF="التَّاءُ الْمَفْتُوحَةُ",CH2="الْهَاءُ",CRT="ة ← ت";
+var BL="أَيُّ حَرْفٍ يَنْقُصُ الْكَلِمَةَ؟";
+
+var QB=[
+{c:CX,e:"⭐",w:"أُمٌّ",q:"مَا نَوْعُ التَّنْوِينِ مَعَ الشَّدَّةِ؟",o:TN,oc:TNC,a:1,x:"شَدَّةٌ وَضَمَّتَانِ: تَنْوِينُ ضَمٍّ."},
+{c:CX,e:"⭐",w:"حُبًّا",q:"مَا نَوْعُ التَّنْوِينِ مَعَ الشَّدَّةِ؟",o:TN,oc:TNC,a:0,x:"شَدَّةٌ وَفَتْحَتَانِ: تَنْوِينُ فَتْحٍ."},
+{c:CX,e:"⭐",w:"بِحُبٍّ",q:"مَا نَوْعُ التَّنْوِينِ مَعَ الشَّدَّةِ؟",o:TN,oc:TNC,a:2,x:"شَدَّةٌ وَكَسْرَتَانِ: تَنْوِينُ كَسْرٍ."},
+{c:CX,t:"b",e:"🛠️",st:["أُ","م"],tg:"u",q:"اِصْنَعِي الْكَلِمَةَ: شَدَّةٌ مَعَ تَنْوِينِ ضَمٍّ"},
+{c:CX,t:"b",e:"🛠️",st:["حُ","ب"],tg:"a",q:"اِصْنَعِي الْكَلِمَةَ: شَدَّةٌ مَعَ تَنْوِينِ فَتْحٍ"},
+{c:CX,t:"b",e:"🛠️",st:["جَ","د"],tg:"i",q:"اِصْنَعِي الْكَلِمَةَ: شَدَّةٌ مَعَ تَنْوِينِ كَسْرٍ"},
+{c:CX,e:"🧩",pt:sp("حُ","ب","a"),ptc:"a",q:"أَيُّ كَلِمَةٍ نَقْرَؤُهَا هَكَذَا؟",o:[mk("حُ","ب","a"),mk("حُ","ب","u"),mk("حُ","ب","i")],big:1,a:0,x:"بَنْ = فَتْحَةٌ + نُونٌ ← تَنْوِينُ فَتْحٍ."},
+{c:CX,e:"🧩",pt:sp("أُ","م","u"),ptc:"u",q:"أَيُّ كَلِمَةٍ نَقْرَؤُهَا هَكَذَا؟",o:[mk("أُ","م","a"),mk("أُ","م","u"),mk("أُ","م","i")],big:1,a:1,x:"مُنْ = ضَمَّةٌ + نُونٌ ← تَنْوِينُ ضَمٍّ."},
+{c:CX,t:"tap",e:"👆",s:["مَرْوَةُ","أُمٌّ","حَنُونٌ"],a:1,q:"اُنْقُرِي عَلَى الْكَلِمَةِ الَّتِي فِيهَا شَدَّةٌ وَتَنْوِينٌ مَعًا",x:"( أُمٌّ ) فِيهَا شَدَّةٌ وَضَمَّتَانِ، أَمَّا ( حَنُونٌ ) فَتَنْوِينٌ فَقَطْ."},
+{c:CX,t:"tap",e:"👆",s:["تُحِبُّهُمَا","حُبًّا","كَبِيرًا"],a:1,q:"اُنْقُرِي عَلَى الْكَلِمَةِ الَّتِي فِيهَا شَدَّةٌ وَتَنْوِينٌ مَعًا",x:"( حُبًّا ) فِيهَا شَدَّةٌ وَفَتْحَتَانِ، أَمَّا ( كَبِيرًا ) فَتَنْوِينٌ فَقَطْ."},
+{c:CX,e:"🔍",q:"أَيُّ كَلِمَةٍ فِيهَا شَدَّةٌ وَتَنْوِينٌ مَعًا؟",o:["أُمٌّ","أُمَّهَا","بِنْتٌ"],big:1,oc:null,a:0,x:"( أُمٌّ ) شَدَّةٌ وَتَنْوِينٌ. ( أُمَّهَا ) شَدَّةٌ فَقَطْ. ( بِنْتٌ ) تَنْوِينٌ فَقَطْ."}
+];
+var QC=[
+{c:CTM,e:"🌿",w:"مَرْوَ_",q:BL,o:LT,oc:LTC,let:1,a:1,x:"نَقِفُ عَلَى ( مَرْوَةْ ) فَنَسْمَعُ هَاءً، فَهِيَ تَاءٌ مَرْبُوطَةٌ ( ة )."},
+{c:CTF,e:"🌿",w:"بِنْ_",q:BL,o:LT,oc:LTC,let:1,a:0,x:"( بِنْتْ ) نَسْمَعُ تَاءً فِي الْآخِرِ، فَهِيَ تَاءٌ مَفْتُوحَةٌ ( ت )."},
+{c:CH2,e:"🌿",w:"لِلَّ_",q:BL,o:LT,oc:LTC,let:1,a:2,x:"( لِلَّهِ ) تَنْتَهِي بِهَاءٍ ( ه )."},
+{c:CTM,e:"🌿",w:"السُّفْرَ_",q:BL,o:LT,oc:LTC,let:1,a:1,x:"( السُّفْرَةْ ) نَسْمَعُ هَاءً، فَهِيَ تَاءٌ مَرْبُوطَةٌ."},
+{c:CTF,e:"🌿",w:"بَيْ_",q:BL,o:LT,oc:LTC,let:1,a:0,x:"( بَيْتْ ) نَسْمَعُ تَاءً، فَهِيَ تَاءٌ مَفْتُوحَةٌ."},
+{c:CH2,e:"🌿",w:"وَجْ_",q:BL,o:LT,oc:LTC,let:1,a:2,x:"( وَجْه ) تَنْتَهِي بِهَاءٍ ( ه )."},
+{c:CTM,t:"tap",e:"👆",s:["إِيمَانُ","بِنْتٌ","طَيِّبَةٌ"],a:2,q:"اُنْقُرِي عَلَى الْكَلِمَةِ الَّتِي تَنْتَهِي بِتَاءٍ مَرْبُوطَةٍ ( ة )",x:"( طَيِّبَةٌ ) تَنْتَهِي بِتَاءٍ مَرْبُوطَةٍ."},
+{c:CTF,t:"tap",e:"👆",s:["الْأُسْرَةُ","فِي","بَيْتٍ"],a:2,q:"اُنْقُرِي عَلَى الْكَلِمَةِ الَّتِي تَنْتَهِي بِتَاءٍ مَفْتُوحَةٍ ( ت )",x:"( بَيْتٍ ) تَنْتَهِي بِتَاءٍ مَفْتُوحَةٍ، أَمَّا ( الْأُسْرَةُ ) فَتَاؤُهَا مَرْبُوطَةٌ."},
+{c:CRT,e:"🔄",w:"أُسْرَةٌ + ي",q:"أُسْرَةٌ ← مَاذَا نَكْتُبُ مَعَ الضَّمِيرِ ( ي )؟",o:["أُسْرَتِي","أُسْرَةِي","أُسْرَهِي"],big:1,a:0,x:"مَعَ الضَّمِيرِ تَتَحَوَّلُ ( ة ) إِلَى ( ت ): أُسْرَتِي."},
+{c:CTM,e:"👂",w:"الْأُسْرَةْ",q:"إِذَا وَقَفْنَا عَلَى الْكَلِمَةِ، مَاذَا نَسْمَعُ فِي آخِرِهَا؟",o:["تَاءً ( ت )","هَاءً ( ه )"],a:1,x:"نَقِفُ عَلَى التَّاءِ الْمَرْبُوطَةِ بِصَوْتِ الْهَاءِ."},
+{c:CTF,e:"🤔",w:"بَيْتٌ",q:"هَلْ ( بَيْتٌ ) تَنْتَهِي بِتَاءٍ مَرْبُوطَةٍ؟",o:YN,a:1,x:"لَا، تَاؤُهَا مَفْتُوحَةٌ، نَقِفُ عَلَيْهَا بِصَوْتِ التَّاءِ."}
+];
+var QD=[
+{c:CM,e:"🎶",w:"شَمْسَانَ",q:"مَا نَوْعُ الْمَدِّ فِي الْكَلِمَةِ؟",o:MD,a:0,x:"فَتْحَةٌ ثُمَّ أَلِفٌ ( ـَا ): مَدٌّ بِالْأَلِفِ."},
+{c:CM,e:"🎶",w:"حَنُونٌ",q:"مَا نَوْعُ الْمَدِّ فِي الْكَلِمَةِ؟",o:MD,a:1,x:"ضَمَّةٌ ثُمَّ وَاوٌ ( ـُو ): مَدٌّ بِالْوَاوِ."},
+{c:CM,e:"🎶",w:"كَرِيمٌ",q:"مَا نَوْعُ الْمَدِّ فِي الْكَلِمَةِ؟",o:MD,a:2,x:"كَسْرَةٌ ثُمَّ يَاءٌ ( ـِي ): مَدٌّ بِالْيَاءِ."},
+{c:CT,e:"🔔",w:"بِنْتٌ",q:"مَا نَوْعُ التَّنْوِينِ؟",o:TN,oc:TNC,a:1,x:"ضَمَّتَانِ عَلَى التَّاءِ: تَنْوِينُ ضَمٍّ."},
+{c:CT,e:"🔔",w:"شُكْرًا",q:"مَا نَوْعُ التَّنْوِينِ؟",o:TN,oc:TNC,a:0,x:"فَتْحَتَانِ: تَنْوِينُ فَتْحٍ."},
+{c:CT,e:"🔔",w:"بَيْتٍ",q:"مَا نَوْعُ التَّنْوِينِ؟",o:TN,oc:TNC,a:2,x:"كَسْرَتَانِ: تَنْوِينُ كَسْرٍ."},
+{c:CS,e:"💪",q:"أَيُّ كَلِمَةٍ فِيهَا شَدَّةٌ ( ـّ )؟",o:["أُمَّهَا","مَرْوَةَ","يَدَ"],big:1,a:0,x:"( أُمَّهَا ): الشَّدَّةُ عَلَى حَرْفِ الْمِيمِ."}
+];
+var QE=[
+{c:CL,e:"🌙",w:"الْأُمَّ",q:"مَاذَا نَرَى فِي أَوَّلِ الْكَلِمَةِ؟",o:LM,oc:LMC,a:1,x:"نَنْطِقُ اللَّامَ: ( الْأُمَّ ). هِيَ لَامٌ قَمَرِيَّةٌ."},
+{c:CL,e:"☀️",w:"السُّفْرَةَ",q:"مَاذَا نَرَى فِي أَوَّلِ الْكَلِمَةِ؟",o:LM,oc:LMC,a:0,x:"لَا نَنْطِقُ اللَّامَ، وَالسِّينُ عَلَيْهَا شَدَّةٌ: لَامٌ شَمْسِيَّةٌ."},
+{c:CL,e:"☀️",w:"الطَّعَامِ",q:"مَاذَا نَرَى فِي أَوَّلِ الْكَلِمَةِ؟",o:LM,oc:LMC,a:0,x:"لَا نَنْطِقُ اللَّامَ، وَالطَّاءُ عَلَيْهَا شَدَّةٌ: لَامٌ شَمْسِيَّةٌ."},
+{c:CF,e:"👩",q:"مَا اسْمُ أُمِّ إِيمَانَ؟",o:["مَرْوَةُ","شَمْسَانُ","أَمِيرَةُ"],big:1,a:0,x:"أُمُّ إِيمَانَ اسْمُهَا مَرْوَةُ."},
+{c:CF,e:"👨",q:"مَا اسْمُ أَبِي إِيمَانَ؟",o:["مَرْوَةُ","شَمْسَانُ","أَمِيرٌ"],big:1,a:1,x:"أَبُو إِيمَانَ اسْمُهُ شَمْسَانُ."}
+];
+var CW="أَقْسَامُ الْكَلِمَةِ";
+var WT=["اسْمٌ 🧒","فِعْلٌ 🏃","حَرْفٌ 🔗"];
+var WTC=[["#f08a24","#fff"],["#8b6fd6","#fff"],["#14a38b","#fff"]];
+var QF=[
+{c:CW,e:"🧩",w:"إِيمَانُ",q:"إِيمَانُ: اسْمٌ أَمْ فِعْلٌ أَمْ حَرْفٌ؟",o:WT,oc:WTC,a:0,x:"( إِيمَانُ ) اسْمُ بِنْتٍ، فَهِيَ اسْمٌ."},
+{c:CW,e:"🧩",w:"تُحِبُّ",q:"تُحِبُّ: اسْمٌ أَمْ فِعْلٌ أَمْ حَرْفٌ؟",o:WT,oc:WTC,a:1,x:"( تُحِبُّ ) عَمَلٌ نَعْمَلُهُ بِقُلُوبِنَا، فَهِيَ فِعْلٌ."},
+{c:CW,e:"🧩",w:"فِي",q:"فِي: اسْمٌ أَمْ فِعْلٌ أَمْ حَرْفٌ؟",o:WT,oc:WTC,a:2,x:"( فِي ) كَلِمَةٌ صَغِيرَةٌ تَرْبِطُ الْكَلَامَ، فَهِيَ حَرْفٌ."},
+{c:CW,e:"🧩",w:"مَرْوَةُ",q:"مَرْوَةُ: اسْمٌ أَمْ فِعْلٌ أَمْ حَرْفٌ؟",o:WT,oc:WTC,a:0,x:"( مَرْوَةُ ) اسْمُ أُمِّ إِيمَانَ، فَهِيَ اسْمٌ."},
+{c:CW,e:"🧩",w:"تَقُولُ",q:"تَقُولُ: اسْمٌ أَمْ فِعْلٌ أَمْ حَرْفٌ؟",o:WT,oc:WTC,a:1,x:"( تَقُولُ ) عَمَلٌ نَعْمَلُهُ بِفَمِنَا، فَهِيَ فِعْلٌ."},
+{c:CW,e:"🧩",w:"بَيْتٍ",q:"بَيْتٍ: اسْمٌ أَمْ فِعْلٌ أَمْ حَرْفٌ؟",o:WT,oc:WTC,a:0,x:"( بَيْتٍ ) اسْمُ مَكَانٍ، فَهِيَ اسْمٌ."},
+{c:CW,e:"🧩",w:"عَلَى",q:"عَلَى: اسْمٌ أَمْ فِعْلٌ أَمْ حَرْفٌ؟",o:WT,oc:WTC,a:2,x:"( عَلَى ) حَرْفٌ، مِثْلُ ( فِي ) وَ( مِنْ )."},
+{c:CW,t:"tap",e:"👆",s:["تُسَاعِدُ","إِيمَانُ","الْأُمَّ"],a:0,q:"اُنْقُرِي عَلَى الْفِعْلِ 🏃 ( الْعَمَلِ )",x:"( تُسَاعِدُ ) هِيَ الْعَمَلُ، فَهِيَ فِعْلٌ."},
+{c:CW,t:"tap",e:"👆",s:["تَعِيشُ","الْأُسْرَةُ","فِي","بَيْتٍ"],a:2,q:"اُنْقُرِي عَلَى الْحَرْفِ 🔗",x:"( فِي ) حَرْفٌ، وَ( الْأُسْرَةُ ) وَ( بَيْتٍ ) اسْمَانِ، وَ( تَعِيشُ ) فِعْلٌ."},
+{c:CW,t:"tap",e:"👆",s:["وَتُقَبِّلُ","يَدَ","أَبِيهَا"],a:0,q:"اُنْقُرِي عَلَى الْفِعْلِ 🏃",x:"( وَتُقَبِّلُ ) عَمَلٌ نَعْمَلُهُ، فَهِيَ فِعْلٌ."},
+{c:CW,e:"🔍",q:"أَيُّ كَلِمَةٍ فِعْلٌ 🏃؟",o:["أَبٌ","تَقُولُ","بِنْتٌ"],big:1,a:1,x:"( تَقُولُ ) فِعْلٌ، أَمَّا ( أَبٌ ) وَ( بِنْتٌ ) فَاسْمَانِ."},
+{c:CW,e:"🔍",q:"أَيُّ كَلِمَةٍ حَرْفٌ 🔗؟",o:["عَلَى","أُمٌّ","يَقْرَأُ"],big:1,a:0,x:"( عَلَى ) حَرْفٌ، وَ( أُمٌّ ) اسْمٌ، وَ( يَقْرَأُ ) فِعْلٌ."}
+];
+var LRN=[
+{t:"الِاسْمُ",e:"🧒",col:"#f08a24",d:"اسْمُ إِنْسَانٍ أَوْ حَيَوَانٍ أَوْ شَيْءٍ أَوْ مَكَانٍ",ex:["إِيمَانُ","قِطَّةٌ","بَيْتٌ"]},
+{t:"الْفِعْلُ",e:"🏃",col:"#8b6fd6",d:"عَمَلٌ نَعْمَلُهُ",ex:["تُحِبُّ","تَقُولُ","يَقْرَأُ"]},
+{t:"الْحَرْفُ",e:"🔗",col:"#14a38b",d:"كَلِمَةٌ صَغِيرَةٌ تَرْبِطُ الْكَلَامَ",ex:["فِي","مِنْ","عَلَى"]}
+];
+var SEC=[
+{id:"s",n:"قِصَّةُ إِيمَانَ",e:"📖",col:"#4a90d9",bg:"#dcecfb",sub:"نَقْرَأُ وَنُلَوِّنُ"},
+{id:"b",n:"الشَّدَّةُ + التَّنْوِينُ",e:"⭐",col:"#d9487e",bg:"#ffe3ec",sub:"الْأَهَمُّ! ١١ سُؤَالًا",qs:QB,star:1},
+{id:"c",n:"التَّاءُ وَالْهَاءُ",e:"🌿",col:"#14a38b",bg:"#d7f5ee",sub:"مَفْتُوحَةٌ وَمَرْبُوطَةٌ وَهَاءٌ",qs:QC},
+{id:"f",n:"أَقْسَامُ الْكَلِمَةِ",e:"🧩",col:"#f08a24",bg:"#ffe9d1",sub:"اسْمٌ وَفِعْلٌ وَحَرْفٌ",qs:QF,learn:1},
+{id:"d",n:"الْمَدُّ وَالتَّنْوِينُ وَالشَّدَّةُ",e:"🎶",col:"#8b6fd6",bg:"#ece5fa",sub:"مُرَاجَعَةٌ سَرِيعَةٌ",qs:QD},
+{id:"e",n:"اللَّامُ وَالْفَهْمُ",e:"🌙",col:"#d9a000",bg:"#fff4cc",sub:"شَمْسِيَّةٌ وَقَمَرِيَّةٌ",qs:QE}
+];
+var done={},secRes={},cur=null,qs=[],qi=0,lock=false,act={};
+
+function total(){var s,t=0;for(s in done){if(done.hasOwnProperty(s)&&done[s].a!==undefined){t+=done[s].a;}}return t;}
+function head(t){$("#tt").innerHTML=t;$("#pts").innerHTML="⭐ "+arn(total());}
+function bar(p,c){$("#bar").style.width=p+"%";$("#bar").style.background=c||"#6c9be0";}
+$("#hm").onclick=function(){menu();};
+$("#fl").onclick=function(){menu();};
+
+/* ---- القائمة ---- */
+function menu(){
+ head("وَاجِبُ إِيمَانَ");bar(0);window.scrollTo(0,0);
+ var h='<div class="card"><div class="em">👧👩👨</div><h1>بِرُّ الْوَالِدَيْنِ 💛</h1><div class="txt">اِخْتَارِي مَا تُرِيدِينَ أَنْ تَلْعَبِي 👇</div></div><div class="menu">',k,s,st;
+ for(k=0;k<SEC.length;k++){
+  s=SEC[k];st=done[s.id];
+  h+='<button class="mc'+(s.star?' star':'')+'" data-k="'+k+'" style="background:'+s.bg+(s.star?'':';border:4px solid '+s.col)+'"><div class="e">'+s.e+'</div><div class="n" style="color:'+s.col+'">'+s.n+'</div><div class="s">'+s.sub+'</div>'+
+  (st?'<div class="s" style="color:#1b7a43">✅ '+(st.a!==undefined?arn(st.a)+' / '+arn(st.b):'تَمَّتِ الْقِرَاءَةُ')+'</div>':'')+'</button>';
+ }
+ h+='</div><div><button class="nx gr" id="rp">📋 تَقْرِيرُ الْمُعَلِّمَةِ</button></div>';
+ app.innerHTML=h;
+ all(".mc").forEach(function(b){b.onclick=function(){var s=SEC[parseInt(b.getAttribute("data-k"),10)];if(s.id==="s"){story();}else{startSec(s);}};});
+ $("#rp").onclick=report;
+}
+
+/* ---- القصة ---- */
+function story(){
+ head("📖 قِصَّةُ إِيمَانَ");bar(100,"#4a90d9");window.scrollTo(0,0);act={};
+ var h='<div class="card"><h2>إِيمَانُ وَالْوَالِدَانِ</h2><div class="small">اِقْرَئِي كُلَّ جُمْلَةٍ بِصَوْتٍ عَالٍ</div>',i,j,t,pl,p,ch="";
+ for(i=0;i<P.length;i++){
+  t="";pl=[];
+  for(j=0;j<P[i].length;j++){p=P[i][j].split("|");pl.push(p[0]);t+='<span class="w" data-c="'+p[1]+'">'+p[0]+'</span> ';}
+  h+='<div class="sent"><div class="t">'+t+'</div>'+spk(pl.join(" "))+'</div>';
+ }
+ h+='</div><div class="card"><div class="txt">🖍️ لَوِّنِي مَا تُرِيدِينَ:</div><div class="chips" id="chips"></div></div><button class="nx" id="go">▶ الْقَائِمَةُ</button>';
+ app.innerHTML=h;
+ for(j=0;j<CH.length;j++){ch+='<button class="chip" data-k="'+CH[j][0]+'" style="background:'+CH[j][2]+'">'+CH[j][1]+'</button>';}
+ $("#chips").innerHTML=ch;
+ function paint(){
+  all(".chip").forEach(function(b){b.className="chip"+(act[b.getAttribute("data-k")]?" on":"");});
+  all(".w").forEach(function(w){
+   var cs=w.getAttribute("data-c").split(","),c=null,x;
+   for(x=0;x<PRI.length;x++){if(act[PRI[x]]&&cs.indexOf(PRI[x])>-1){c=PRI[x];break;}}
+   w.style.background=c?colOf[c]:"transparent";
+  });
+ }
+ all(".chip").forEach(function(b){b.onclick=function(){var k=b.getAttribute("data-k");act[k]=!act[k];paint();};});
+ bindSay();
+ $("#go").onclick=function(){if(!done.s){done.s={};}menu();};
+}
+
+/* ---- الأسئلة ---- */
+function startSec(s){
+ cur=s;qs=s.qs;qi=0;secRes[s.id]=[];done[s.id]={a:0,b:qs.length};
+ if(s.learn){learn();}else{ask();}
+}
+function learn(){
+ head(cur.e+" "+cur.n);bar(0,cur.col);window.scrollTo(0,0);
+ var h='<div class="card"><h2>أَقْسَامُ الْكَلِمَةِ ثَلَاثَةٌ</h2><div class="small">اُنْقُرِي عَلَى الْكَلِمَةِ لِتَسْمَعِيهَا</div><div class="lcs">',k,j;
+ for(k=0;k<LRN.length;k++){
+  h+='<div class="lc" style="background:'+LRN[k].col+'"><div class="e">'+LRN[k].e+'</div><div class="n">'+LRN[k].t+'</div><div class="d">'+LRN[k].d+'</div><div class="xs">';
+  for(j=0;j<LRN[k].ex.length;j++){h+='<button class="xw" data-say="'+LRN[k].ex[j]+'">'+LRN[k].ex[j]+'</button>';}
+  h+='</div></div>';
+ }
+ h+='</div><button class="nx" id="pl">هَيَّا نَلْعَبُ 🎮</button></div>';
+ app.innerHTML=h;
+ all(".xw").forEach(function(b){b.onclick=function(){say(b.getAttribute("data-say"));};});
+ $("#pl").onclick=ask;
+}
+function optHTML(q,k){
+ var st=q.oc?'background:'+q.oc[k][0]+';color:'+q.oc[k][1]+';border-color:'+q.oc[k][0]:'border-color:'+cur.col;
+ return '<button class="opt'+(q.big?' big':'')+(q.let?' let':'')+'" data-k="'+k+'" style="'+st+'">'+q.o[k]+'</button>';
+}
+function ask(){
+ if(qi>=qs.length){secEnd();return;}
+ head(cur.e+" "+cur.n);bar(qi/qs.length*100,cur.col);window.scrollTo(0,0);lock=false;
+ var q=qs[qi],h,k,t=q.t||"mc";
+ h='<div class="card"><span class="badge" style="background:'+cur.col+'">'+arn(qi+1)+' / '+arn(qs.length)+'</span><div class="em" style="font-size:clamp(46px,7vw,70px)">'+q.e+'</div>';
+ if(q.pt){h+='<div class="parts"><span class="pt">'+q.pt[0]+'</span><span class="plus">+</span><span class="pt" style="background:'+CP[q.ptc]+'">'+q.pt[1]+'</span></div>'+spk(q.pt[0]+" "+q.pt[1]);}
+ if(q.w&&t==="mc"){h+='<div class="word">'+q.w+'</div>'+(q.w.indexOf("_")<0&&q.w.indexOf("+")<0?spk(q.w):"");}
+ h+='<div class="txt"><b>'+q.q+'</b></div>';
+ if(t==="mc"){
+  h+='<div class="opts'+(q.let?' lt':'')+(q.o.length===2?' two':'')+'">';
+  for(k=0;k<q.o.length;k++){h+=optHTML(q,k);}
+  h+='</div>';
+ }else if(t==="tap"){
+  h+='<div class="sent2" id="tp">';
+  for(k=0;k<q.s.length;k++){h+='<button class="tw" data-k="'+k+'">'+q.s[k]+'</button>';}
+  h+='</div>';
+ }else{
+  h+='<div class="word pop" id="pv">'+q.st[0]+q.st[1]+SH+'<span style="color:#bbb">؟</span></div><div class="opts">';
+  var T=["a","u","i"];
+  for(k=0;k<3;k++){h+='<button class="opt sg" data-k="'+k+'" style="border-color:'+TNC[k][0]+'"><span class="sig" style="color:'+TNC[k][0]+'">'+sym(T[k])+'</span>'+TN[k]+'</button>';}
+  h+='</div>';
+ }
+ h+='<div class="fb" id="fb"></div><div id="nxb"></div></div>';
+ app.innerHTML=h;bindSay();
+ if(t==="mc"){var bs=all(".opt");bs.forEach(function(b){b.onclick=function(){var kk=parseInt(b.getAttribute("data-k"),10);fin(kk===q.a,b,function(){bs[q.a].className+=" ok";bs[q.a].innerHTML="✅ "+bs[q.a].innerHTML;if(kk!==q.a){b.className+=" no";}},q.x);};});}
+ else if(t==="tap"){var ts=all(".tw");ts.forEach(function(b){b.onclick=function(){var kk=parseInt(b.getAttribute("data-k"),10);fin(kk===q.a,b,function(){ts[q.a].className+=" ok";if(kk!==q.a){b.className+=" no";}},q.x);};});}
+ else{
+  var bb=all(".opt"),T2=["a","u","i"];
+  bb.forEach(function(b){b.onclick=function(){
+   var kk=parseInt(b.getAttribute("data-k"),10),good=(T2[kk]===q.tg),i2,rt=0;
+   for(i2=0;i2<3;i2++){if(T2[i2]===q.tg){rt=i2;}}
+   $("#pv").innerHTML=mk(q.st[0],q.st[1],T2[kk]);$("#pv").className="word pop";
+   var cw=mk(q.st[0],q.st[1],q.tg);
+   fin(good,b,function(){bb[rt].className+=" ok";if(!good){b.className+=" no";}},"الْكَلِمَةُ الصَّحِيحَةُ: ( "+cw+" ) — "+TN[rt]+" مَعَ الشَّدَّةِ.");
+  };});
+ }
+}
+function fin(good,el,mark,x){
+ if(lock){return;}lock=true;
+ secRes[cur.id].push({c:qs[qi].c,g:good});
+ if(good){done[cur.id].a++;burst(el);$("#fb").innerHTML='🌟 أَحْسَنْتِ!<div class="ex">'+x+'</div>';}
+ else{el.className+=" shake";$("#fb").innerHTML='لَا بَأْسَ 💚 الْإِجَابَةُ الصَّحِيحَةُ بِاللَّوْنِ الْأَخْضَرِ<div class="ex">'+x+'</div>';}
+ mark();head(cur.e+" "+cur.n);
+ $("#nxb").innerHTML='<button class="nx" id="nq">'+(qi+1<qs.length?'التَّالِي ◀':'النَّتِيجَةُ 🏆')+'</button>';
+ $("#nq").onclick=function(){qi++;ask();};
+}
+function secEnd(){
+ head(cur.e+" "+cur.n);bar(100,cur.col);window.scrollTo(0,0);
+ var d=done[cur.id],r=d.a/d.b,n=r>=0.85?3:(r>=0.55?2:1),st="",k;
+ for(k=0;k<3;k++){st+=k<n?"⭐":"☆";}
+ var msg=r>=0.85?"أَنْتِ بَطَلَةٌ رَائِعَةٌ! 🌟":(r>=0.55?"جَيِّدٌ جِدًّا! نُرَاجِعُ بَعْضَ الْأَشْيَاءِ 💪":"بِدَايَةٌ جَمِيلَةٌ! سَنَتَدَرَّبُ مَعًا 💛");
+ app.innerHTML='<div class="card"><div class="em">🏆</div><h2>أَحْسَنْتِ يَا إِيمَانُ!</h2><div class="stars">'+st+'</div><div class="sc" style="color:'+cur.col+'">'+arn(d.a)+' / '+arn(d.b)+'</div><div class="txt">'+msg+'</div>'+
+ '<button class="nx gr" id="ag">🔁 نُعِيدُ</button><button class="nx" id="mn">🏠 الْقَائِمَةُ</button></div>';
+ $("#ag").onclick=function(){startSec(cur);};$("#mn").onclick=menu;
+}
+
+/* ---- التقرير ---- */
+function report(){
+ head("📋 تَقْرِيرُ الْمُعَلِّمَةِ");bar(100,"#9aa3b5");window.scrollTo(0,0);
+ var t={},od=[],k,s,r,tb="",any=false;
+ for(s in secRes){if(secRes.hasOwnProperty(s)){
+  for(k=0;k<secRes[s].length;k++){any=true;var c=secRes[s][k].c;if(!t[c]){t[c]={a:0,b:0};od.push(c);}t[c].b++;if(secRes[s][k].g){t[c].a++;}}
+ }}
+ for(k=0;k<od.length;k++){var o=t[od[k]],f=(o.a===o.b);tb+='<tr><td>'+od[k]+'</td><td class="n '+(f?'g':'r')+'">'+arn(o.a)+' / '+arn(o.b)+' '+(f?'✅':'⚠️')+'</td></tr>';}
+ app.innerHTML='<div class="card"><h2>📋 تَقْرِيرُ الْمُعَلِّمَةِ</h2>'+(any?'<table>'+tb+'</table><div class="small">⚠️ = يَحْتَاجُ مُرَاجَعَةً</div>':'<div class="txt">لَمْ تَبْدَأِ الْأَسْئِلَةَ بَعْدُ.</div>')+'<button class="nx" id="mn">🏠 الْقَائِمَةُ</button></div>';
+ $("#mn").onclick=menu;
+}
+menu();
+})();
+</script></body></html>
